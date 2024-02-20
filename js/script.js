@@ -56,15 +56,18 @@ createApp({
 
       // funzione per aggiungere il testo del campo di imput alla lista
       addTodo(){
+        // controllo che il campo di input non sia vuoto
+        if (this.newTodo.trim() !== '') {
         // console.log("new")
         // console.log(this.newTodo)
         this.todos.push({
           text: this.newTodo,
           done: false,
-        })
+        }),
 
         // cancello il contenuto del campo di imput
-        this.newTodo =''
+        this.newTodo =''}
       },
+
     } 
 }).mount('#app');
