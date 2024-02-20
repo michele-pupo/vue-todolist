@@ -21,6 +21,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+
+            newTodo: '',
             
             todos : [
                     {
@@ -50,6 +52,16 @@ createApp({
       deleteTodo(todoIndex){
         // console.log(todoIndex)
         this.todos.splice(todoIndex, 1)
+      },
+
+      // funzione per aggiungere il testo del campo di imput alla lista
+      addTodo(){
+        // console.log("new")
+        // console.log(this.newTodo)
+        this.todos.push({
+          text: this.newTodo,
+          done: false
+        })
       },
     } 
 }).mount('#app');
