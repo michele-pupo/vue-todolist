@@ -40,5 +40,14 @@ createApp({
 
         }
     },
-    
+
+    methods: {
+      
+      deleteTodo(todoIndex){
+        // console.log(todoIndex)
+        // alla pressione del pulsante elimino dalla lista l'elemnto cliccato
+        this.todos.splice(todoIndex, 1)
+      }
+
+    },
 }).mount('#app');
