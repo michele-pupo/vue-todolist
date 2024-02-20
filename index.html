@@ -49,6 +49,7 @@
                         placeholder="Cosa vuoi aggiungere?" 
                         aria-label="Cosa vuoi aggiungere" 
                         aria-describedby="add-todo"
+                        @keyup.enter="addTodo"
                     >
                     <button 
                         class="btn btn-outline-secondary" 

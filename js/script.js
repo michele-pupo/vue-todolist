@@ -60,8 +60,11 @@ createApp({
         // console.log(this.newTodo)
         this.todos.push({
           text: this.newTodo,
-          done: false
+          done: false,
         })
+
+        // cancello il contenuto del campo di imput
+        this.newTodo =''
       },
     } 
 }).mount('#app');
