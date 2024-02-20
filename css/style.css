@@ -1,3 +1,7 @@
 .list-group button i{
     cursor: pointer;
 }
+
+.done {
+    text-decoration: line-through;
+  }

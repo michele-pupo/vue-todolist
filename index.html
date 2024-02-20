@@ -28,8 +28,8 @@
         <div class="container-fluid d-flex justify-content-center">
             <div class="row col-6 mt-5">   
                 <ul class="list-group">
-                    <li v-for="(currentTodo, index) in todos" class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ currentTodo.text }}
+                    <li v-for="(currentTodo, index) in todos" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
+                        <span :class="{ done: currentTodo.done }">{{ currentTodo.text }}</span>
                     <button @click="deleteTodo(index)" class="border-0 bg-white"><i class="fa-regular fa-trash-can fs-3"></i></button>
                     </li>
                 </ul>
