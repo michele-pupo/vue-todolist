@@ -28,9 +28,13 @@
         <div class="container-fluid d-flex flex-column align-items-center">
             <div class="row col-6 mt-5">   
                 <ul class="list-group">
-                    <li v-for="(currentTodo, index) in todos" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
-                        <span :class="{ done: currentTodo.done }">{{ currentTodo.text }}</span>
-                    <button @click="deleteTodo(index)" class="border-0 bg-white"><i class="fa-regular fa-trash-can fs-3"></i></button>
+                    <li v-for="(currentTodo, index) in todos" :key="index" class="list-group-item d-flex justify-content-between align-items-center border border-black rounded-5">
+                        <span 
+                            :class="{ done: currentTodo.done }"
+                            @click="toggleDone(index)"
+                        >{{ currentTodo.text }}
+                        </span>
+                    <button @click="deleteTodo(index)" class="border-0"><i class="fa-regular fa-trash-can fs-2"></i></button>
                     </li>
                 </ul>
             </div>
@@ -40,7 +44,7 @@
             </div>
 
             <div id="add-todo" class="col-5 mt-5">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 border border-black rounded-3">
                     <span class="input-group-text">Inserisci qualcosa in lista</span>
                     <input
                         v-model="newTodo" 
@@ -52,7 +56,7 @@
                         @keyup.enter="addTodo"
                     >
                     <button 
-                        class="btn btn-outline-secondary" 
+                        class="btn btn-outline-secondary btn-info" 
                         type="button" 
                         id="add-todo"
                         @click="addTodo()"

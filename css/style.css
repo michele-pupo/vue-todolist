@@ -1,7 +1,25 @@
+body{
+    background-color: #F0DBAF;
+}
+
+.list-group li{
+    background-color: #F9E8D9;
+}
+
+.list-group button{
+    background-color: #F9E8D9;
+}
+
 .list-group button i{
     cursor: pointer;
 }
 
+.list-group .list-group-item{
+    cursor: pointer;
+    user-select: none;
+}
+
 .done {
     text-decoration: line-through;
+    color: red;
   }
