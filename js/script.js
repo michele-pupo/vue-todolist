@@ -40,7 +40,12 @@ createApp({
                     {
                         text: 'Controllare batteria pc',
                         done: true,
-                    },    
+                    },
+                    {
+                        text: 'Collegarsi su zoom per la lezione',
+                        done: false,
+                    },
+
                 ],
 
         }

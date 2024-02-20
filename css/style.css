@@ -22,4 +22,5 @@ body{
 .done {
     text-decoration: line-through;
     color: red;
-  }
+    font-style: italic;
+}
