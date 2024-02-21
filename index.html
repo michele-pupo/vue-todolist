@@ -40,8 +40,9 @@
                 </ul>
             </div>
 
-            <div v-if="todos.length == 0" class="d-flex">
-                <h1>Hai completato la lista!</h1>
+            <div v-if="todos.length == 0" class="d-flex flex-column align-items-center" id="text-end-list">
+                <h1 class="text-success fw-bold text-uppercase display-2">Ottimo</h1>
+                <h2 class="display-4">Hai completato la lista!</h2>
             </div>
 
             <div id="add-todo" class="col-5 mt-5">
